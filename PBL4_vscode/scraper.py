@@ -1,6 +1,8 @@
-from facebook_scraper import get_posts, get_group_info
-from datetime import datetime, timedelta
-import pandas as pd
+#create a virtual environment (.venv)
+#run virtual environment: .venv/bin/activate
+from facebook_scraper import get_posts, get_group_info #pip install facebook-scraper
+from datetime import datetime, timedelta #pip install datetime
+import pandas as pd #pip install pandas
 import time
 
 FANPAGE_LINK ="groups/jobITDaNang"
