@@ -2,7 +2,7 @@ const Client = require('mongodb').MongoClient;
 const Exceljs = require('exceljs');
 
 const excelPath = "./result/post_text_date.xlsx";
-const mongoURI = 'mongodb+srv://nathan:PBL4@pbl4.xemvqhk.mongodb.net/PBL4?retryWrites=true&w=majority';
+const mongoURI = 'mongodb+srv://adminPBL4:admin@pbl4.xemvqhk.mongodb.net/PBL4?retryWrites=true&w=majority';
 
 //connect to mongoDB
 Client.connect(mongoURI)
@@ -28,7 +28,8 @@ Client.connect(mongoURI)
         }
         });
         //insert data
-        await db.collection('Facebook_Posts').insertMany(data);
+        await db.collection('Facebook_Posts').deleteMany();
+        //await db.collection('Facebook_Posts').insertMany(data);
 
         console.log('Inserted!');
 
